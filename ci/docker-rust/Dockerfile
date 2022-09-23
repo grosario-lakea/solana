@@ -26,23 +26,4 @@ RUN set -x \
       sudo \
       golang \
       unzip \
-      \
- && apt remove -y libcurl4-openssl-dev \
- && rm -rf /var/lib/apt/lists/* \
- && node --version \
- && npm --version \
- && rustup component add rustfmt \
- && rustup component add clippy \
- && rustup target add wasm32-unknown-unknown \
- && cargo install cargo-audit \
- && cargo install cargo-sort \
- && cargo install mdbook \
- && cargo install mdbook-linkcheck \
- && cargo install svgbob_cli \
- && cargo install wasm-pack \
- && rustc --version \
- && cargo --version \
- && curl -OL https://github.com/google/protobuf/releases/download/v$PROTOC_VERSION/$PROTOC_ZIP \
- && unzip -o $PROTOC_ZIP -d /usr/local bin/protoc \
- && unzip -o $PROTOC_ZIP -d /usr/local include/* \
- && rm -f $PROTOC_ZIP
+      
